@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Predicting Campus Placement Data
+	</title>
+	<style>
+
+
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			background-color: #FFA500;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		form {
+			text-align: left;
+			margin-bottom: 35px;
+		}
+
+		/* Styling form-control Label */
+		form label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		form input,
+		form select,
+		form textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		form input[type="radio"],
+		form input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #FFA500;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+<section id="y_predict" class="y_predict">
+	<div class="container">
+		<div class="section-title">
+			<h2>Fill the Details in Form</h2>
+			<div class="row content">
+				<div class="first">
+					<form action="{{ url_for('y_predict)'}}" method="POST">
+						<form action="/y_predict" method="post">
+
+							<label>Age</label>
+			<!-- Input Type Text -->
+						<input type="number" id="age" name="age" placeholder="Enter your Age" />
+		<br>
+						<label>Gender</label>
+			<!-- Input Type Email-->
+						<input type="number" id="sex" name="sex" placeholder="Male(1), Female(0)" />
+		<br>
+						<label>Stream</label>
+			<!-- Input Type Email-->
+						<input type="number" id="stream" name="stream" placeholder="ECE(1), CS(2), IT(3), Mech(4), Elec(5), Civil(6)"/>
+		<br>
+						<label>Internships</label>
+			<!-- Input Type Email-->
+						<input type="number" id="interns" name="interns" placeholder="Enter Internships" />
+		<br>
+						<label>CGPA</label>
+			<!-- Input Type Email-->
+						<input type="number" id="cgpa" name="cgpa" placeholder="Enter CGPA" />
+		<br>
+						<label>Number of Backlogs</label>
+			<!-- Input Type Email-->
+						<input type="number" id="backlog" name="backlog" placeholder="No of Backlogs" />
+		<br>
+						<button type="submit" value="submit">Submit</button>
+						</form>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+
+</html>
